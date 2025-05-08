@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="704.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StackHolder.StackVController">
+   <center>
+      <Label fx:id="docText" alignment="TOP_LEFT" contentDisplay="BOTTOM" prefHeight="312.0" prefWidth="394.0" wrapText="true" BorderPane.alignment="CENTER" />
+   </center>
+   <right>
+      <VBox alignment="CENTER_LEFT" prefHeight="481.0" prefWidth="146.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="100.0" prefWidth="72.0" text="Word on top of the Undo Stack" textAlignment="CENTER" wrapText="true" />
+                  <Label prefHeight="104.0" prefWidth="75.0" text="Word on top of the Redo Stack" textAlignment="CENTER" wrapText="true" />
+               </children>
+            </HBox>
+            <HBox prefHeight="45.0" prefWidth="146.0">
+               <children>
+                  <Label fx:id="undoTop" alignment="CENTER" prefHeight="52.0" prefWidth="75.0" textAlignment="CENTER" textFill="#f23131" wrapText="true" />
+                  <Label fx:id="redoTop" alignment="CENTER" prefHeight="51.0" prefWidth="78.0" textAlignment="CENTER" textFill="#2ed1d1" wrapText="true" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="undoButton" disable="true" mnemonicParsing="false" onAction="#onUndoButtonClick" prefHeight="25.0" prefWidth="83.0" text="Undo" />
+                  <Button fx:id="redoButton" disable="true" mnemonicParsing="false" onAction="#onRedoButtonClick" prefHeight="25.0" prefWidth="80.0" text="Redo" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="addANewWord" alignment="BOTTOM_CENTER" />
+            <Button fx:id="addWord" mnemonicParsing="false" onAction="#onAddWordButtonClick" text="Add word" />
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <Label text="Simple Undo and Redo Stack feature" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>
