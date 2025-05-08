@@ -35,7 +35,7 @@
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <TextField fx:id="addANewWord" alignment="BOTTOM_CENTER" />
-            <Button fx:id="addWord" mnemonicParsing="false" onAction="#onAddWordButtonClick" text="Add word" />
+            <Button mnemonicParsing="false" onAction="#onAddWordButtonClick" text="Add word" />
          </children>
       </HBox>
    </bottom>

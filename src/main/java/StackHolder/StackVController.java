@@ -16,7 +16,7 @@ public class StackVController {
     private TextField addANewWord;
 
     @FXML
-    private Button addWord, undoButton, redoButton;
+    private Button undoButton, redoButton;
 
     @FXML
     protected void onAddWordButtonClick() {
